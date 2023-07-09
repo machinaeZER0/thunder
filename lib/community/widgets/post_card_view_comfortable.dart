@@ -86,8 +86,8 @@ class PostCardViewComfortable extends StatelessWidget {
                           '${postViewMedia.postView.community.name}${showInstanceName ? ' · ${fetchInstanceNameFromUrl(postViewMedia.postView.community.actorId)}' : ''}',
                           style: theme.textTheme.titleSmall?.copyWith(
                             fontSize: theme.textTheme.titleSmall!.fontSize! * 1.05,
-                            // color: theme.textTheme.titleSmall?.color?.withOpacity(0.75),
-                            color: postViewMedia.postView.read ? theme.textTheme.titleSmall?.color?.withOpacity(0.4) : null,
+                            color: postViewMedia.postView.read ? theme.textTheme.titleSmall?.color?.withOpacity(0.4) : theme.textTheme.titleSmall?.color?.withOpacity(0.75),
+                        ),
                           ),
                         ),
                         onTap: () => onTapCommunityName(context, postViewMedia.postView.community.id),
